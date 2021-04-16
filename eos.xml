@@ -8,10 +8,12 @@
   <!-- MISC
   #####################################################-->
   <!-- FDroid -->
-  <project name="android_vendor_fdroid" path="vendor/fdroid" remote="suicide" revision="eos" />
+  <project path="packages/apps/F-DroidPrivilegedExtension" name="privileged-extension.git" remote="fdroid" revision="master" />
+
+  <!-- extendrom -->
+  <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
 
   <!-- /e/ -->
   <project path="vendor/e" name="steadfasterX/android_vendor_e" remote="e" revision="v1-pie" />
-  <project path="vendor/e-mod" name="steadfasterX/android_vendor_e-mod" remote="github" revision="eos-oreo_custom" />
 
 </manifest>

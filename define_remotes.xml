@@ -5,13 +5,13 @@
         fetch="https://github.com/lineageOS/"
         revision="lineage-16.0" />
 
-    <remote  name="suicide"
-           fetch="ssh://git@github.com/Suicide-Squirrel/"
-           revision="eos-pie_custom" />
-
     <remote  name="gfour"
            fetch="ssh://git@github.com/LGgFour/"
-           revision="eos-pie_custom" />
+           revision="eos-pie" />
+
+    <remote name="sfX" fetch="https://github.com/sfX-Android/" />
+
+    <remote name="fdroid" fetch="https://gitlab.com/fdroid/" />
 
     <!-- Requires to create an account and setup ssh access -->
     <!--
