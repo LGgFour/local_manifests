@@ -8,27 +8,32 @@
            fetch="ssh://git@github.com/LGgFour/"
            revision="lineage-17.1" />
 
- 
-  <!-- REMOVALS (must be at TOP)
-  #####################################################-->
-  <remove-project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,pdk-qcom" />
-  <!--remove-project path="hardware/qcom/power" name="LineageOS/android_hardware_qcom_power" groups="pdk" /> -->
+  <remote  name="aol"
+           fetch="https://github.com/aoleary/"
+           revision="q" />
 
-  <!-- KERNEL
-  #####################################################-->
-  <project name="kernel_lge_msm8992" path="kernel/lge/msm8992" remote="gfour" revision="android-10.0" />
+    <!-- REMOVALS (must be at TOP)
+    #####################################################-->
+    <remove-project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,pdk-qcom" />
+    <!--remove-project path="hardware/qcom/power" name="LineageOS/android_hardware_qcom_power" groups="pdk" /> -->
+    <remove-project path="hardware/broadcom/libbt" name="LineageOS/android_hardware_broadcom_libbt" groups="pdk" />
 
-  <!-- DEVICE TREES
-  #####################################################-->
-  <project name="android_device_lge_g4-common" path="device/lge/g4-common" remote="gfour" />
-  <project name="android_device_lge_g4" path="device/lge/g4" remote="gfour" />
+    <!-- KERNEL
+    #####################################################-->
+    <project name="kernel_lge_msm8992" path="kernel/lge/msm8992" remote="gfour" revision="android-10.0" />
 
-  <!-- LOS STUFF
-  #####################################################-->
-  <!--project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="lineage" />-->
+    <!-- DEVICE TREES
+    #####################################################-->
+    <!--project name="device_lge_g4-common" path="device/lge/g4-common" remote="aol" />-->
+    <project name="android_device_lge_g4-common" path="device/lge/g4-common" remote="gfour" />
+    <project name="android_device_lge_g4" path="device/lge/g4" remote="gfour" />
 
-  <!-- MISC
-  #####################################################-->
-  <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-10.0" />
+    <!-- LOS STUFF
+    #####################################################-->
+    <!--project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="lineage" />-->
+
+    <!-- MISC
+    #####################################################-->
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-10.0" />
 
 </manifest>
