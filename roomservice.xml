@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="lineage"
+    <remote  name="lineage"
            fetch="https://github.com/lineageOS/" />
 
-  <remote  name="gfour"
+    <remote  name="gfour"
            fetch="ssh://git@github.com/LGgFour/"
            revision="lineage-18.1" />
   
-  <remote name="sfX" fetch="https://github.com/sfX-Android/" />
+    <remote name="sfX" 
+            fetch="https://github.com/sfX-Android/" />
 
     <!-- REMOVALS (must be at TOP)
     #####################################################-->
+    <!-- part of device tree -->
     <remove-project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,pdk-qcom" />
     <remove-project path="hardware/broadcom/libbt" name="LineageOS/android_hardware_broadcom_libbt" groups="pdk" />
-
+    
     <!-- KERNEL
     #####################################################-->
     <project name="kernel_lge_msm8992" path="kernel/lge/msm8992" remote="gfour" revision="android-11" />
@@ -26,7 +28,7 @@
 
     <!-- LOS STUFF
     #####################################################-->
-    <!--project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="lineage" />-->
+    <project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="lineage" />
 
     <!-- MISC
     #####################################################-->
