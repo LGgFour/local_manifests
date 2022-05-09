@@ -33,7 +33,9 @@
     <!-- MISC
     #####################################################-->
     <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-11" />
+    <!-- signing tools -->
+    <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
+    <!-- extend ROM project -->
     <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
-    <!--project path="external/patches" name="android_external_patches" remote="gfour" revision="android-10.0" />-->
 
 </manifest>
