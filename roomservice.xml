@@ -24,5 +24,11 @@
   #####################################################-->
   <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-9.0" />
   <project path="packages/apps/Trebuchet" name="android_packages_apps_Trebuchet" remote="lineage" />
+  
+  <!-- signing tools -->
+  <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
+  
+  <!-- extend ROM project -->
+  <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
 
 </manifest>
