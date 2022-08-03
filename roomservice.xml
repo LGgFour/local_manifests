@@ -40,4 +40,7 @@
   <!-- extend ROM project -->
   <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
   
+  <!-- /e/ OS -->
+  <project path="vendor/e" name="steadfasterX/android_vendor_e" remote="e" revision="v1-pie" />
+  
 </manifest>
