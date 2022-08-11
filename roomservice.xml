@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  
+    <remote
+        name="lineage"
+        fetch="https://github.com/lineageOS/"
+        revision="lineage-16.0" />
 
+    <remote  name="gfour"
+           fetch="ssh://git@github.com/LGgFour/"
+           revision="eos-pie_custom" />
+  
   <remote name="sfX" fetch="https://github.com/sfX-Android/" />
   
   <!-- REMOVALS (must be at TOP)
