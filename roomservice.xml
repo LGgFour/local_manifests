@@ -8,10 +8,6 @@
            fetch="https://github.com/CypherOS/"
            revision="poundcake-release" />
   
-  <remote  name="suicide"
-           fetch="ssh://git@github.com/Suicide-Squirrel/"
-           revision="lineage-16.0" />
-
  
   <!-- REMOVALS (must be at TOP)
   #####################################################-->
@@ -20,12 +16,12 @@
 
   <!-- KERNEL
   #####################################################-->
-  <project name="Titan-Kernel-LG-G4" path="kernel/lge/msm8992" remote="suicide" revision="android-9.0_sfx" />
+  <project name="kernel_lge_msm8992" path="kernel/lge/msm8992" remote="gfour" revision="titan" />
 
   <!-- DEVICE TREES
   #####################################################-->
-  <project name="android_device_lge_g4-common" path="device/lge/g4-common" remote="suicide" />
-  <project name="android_device_lge_g4" path="device/lge/g4" remote="suicide" />
+  <project name="android_device_lge_g4-common" path="device/lge/g4-common" remote="gfour" />
+  <project name="android_device_lge_g4" path="device/lge/g4" remote="gfour" />
 
   <!-- LOS STUFF
   #####################################################-->
@@ -42,10 +38,15 @@
 
   <!-- MISC
   #####################################################-->
-  <project path="vendor/lge" name="proprietary_vendor_lge" remote="suicide" revision="android-9.0" />
-  <!-- backup solution without google deps -->
-  <project path="packages/apps/Backup" name="stevesoltys/backup" remote="github" revision="master" />
-  <!-- FDroid -->
-  <project name="android_vendor_fdroid" path="vendor/fdroid" remote="suicide" revision="master" />
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-9.0" />
+  
+    <!-- specific patched -->
+    <project path="external/patches" name="android_external_patches" remote="gfour" revision="android-9.0" />
+  
+    <!-- signing tools -->
+    <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
+  
+    <!-- extend ROM project -->
+    <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
 
 </manifest>
