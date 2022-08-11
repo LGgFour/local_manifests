@@ -3,10 +3,6 @@
 
   <remote  name="lineage"
            fetch="https://github.com/lineageOS/" />
-
-  <remote  name="aoscp"
-           fetch="https://github.com/CypherOS/"
-           revision="poundcake-release" />
   
  
   <!-- REMOVALS (must be at TOP)
