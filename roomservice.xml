@@ -6,7 +6,7 @@
 
     <remote  name="gfour"
            fetch="ssh://git@github.com/LGgFour/"
-           revision="lineage-18.1" />
+           revision="lineage-19.1" />
   
     <remote name="sfX" 
             fetch="https://github.com/sfX-Android/" />
@@ -32,7 +32,7 @@
 
     <!-- MISC
     #####################################################-->
-    <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-11" />
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-12" />
     <!-- signing tools -->
     <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
     <!-- extend ROM project -->
