@@ -4,50 +4,47 @@
   <remote  name="lineage"
            fetch="https://github.com/lineageOS/" />
   
-    <remote  name="gfour"
+  <remote  name="gfour"
            fetch="ssh://git@github.com/LGgFour/"
            revision="lineage-16.0" />
   
   <remote name="sfX" fetch="https://github.com/sfX-Android/" />
  
+  <remote name="fdroid"
+          fetch="https://gitlab.com/fdroid/" />
+  
   <!-- REMOVALS (must be at TOP)
   #####################################################-->
   <remove-project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,pdk-qcom" />
-  <!--remove-project path="hardware/qcom/power" name="LineageOS/android_hardware_qcom_power" groups="pdk" />-->
+  <remove-project name="LineageOS/android_hardware_broadcom_libbt" path="hardware/broadcom/libbt"/>
 
   <!-- KERNEL
   #####################################################-->
-  <project name="kernel_lge_msm8992" path="kernel/lge/msm8992" remote="gfour" revision="titan" />
+  <project name="kernel_lge_msm8992" path="kernel/lge/msm8992" remote="gfour" revision="android-9.0" />
 
   <!-- DEVICE TREES
   #####################################################-->
   <project name="android_device_lge_g4-common" path="device/lge/g4-common" remote="gfour" />
   <project name="android_device_lge_g4" path="device/lge/g4" remote="gfour" />
+  <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-9.0" />
 
   <!-- LOS STUFF
   #####################################################-->
   <project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="lineage" />
   <project path="system/qcom" name="android_system_qcom" groups="qcom" remote="lineage"/>
 
-  <!-- Broadcom BT voice FIX
-  #####################################################-->
-  <!--project name="android_hardware_broadcom_libbt" path="hardware/broadcom/libbt" remote="suicide" />-->
-
-  <!-- power HAL patch
-  #####################################################-->
-  <!--project path="hardware/qcom/power" name="android_hardware_qcom_power" remote="suicide" revision="lineage-16.0_synced" />-->
-
   <!-- MISC
   #####################################################-->
-    <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-9.0" />
-  
-    <!-- specific patched -->
-    <!--project path="external/patches" name="android_external_patches" remote="gfour" revision="android-9.0" />-->
-  
-    <!-- signing tools -->
-    <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
-  
-    <!-- extend ROM project -->
-    <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
+  <!-- specific patches -->
+  <!--project path="external/patches" name="android_external_patches" remote="gfour" revision="android-9.0" />-->
+
+  <!-- signing tools -->
+  <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
+
+  <!-- extend ROM project -->
+  <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
+
+  <!-- FDroid -->
+  <project path="packages/apps/F-DroidPrivilegedExtension" name="privileged-extension.git" remote="fdroid" revision="master" />
 
 </manifest>
