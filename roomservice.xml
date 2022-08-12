@@ -42,7 +42,7 @@
     <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-9.0" />
   
     <!-- specific patched -->
-    <project path="external/patches" name="android_external_patches" remote="gfour" revision="android-9.0" />
+    <!--project path="external/patches" name="android_external_patches" remote="gfour" revision="android-9.0" />-->
   
     <!-- signing tools -->
     <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
