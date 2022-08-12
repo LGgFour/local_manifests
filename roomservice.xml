@@ -40,7 +40,7 @@
         <!-- add guard for AOSP hardware/qcom dir -->
         <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
         <!-- add guards for CAF repositories -->
-        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8994/Android.mk" remote="lineage" revision="lineage-18.1 />
+        <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8994/Android.mk" remote="lineage" revision="lineage-18.1" />
         <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/msm8953/Android.bp" remote="lineage" />
         <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8953/Android.mk" remote="lineage" />
         <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8996/Android.bp" remote="lineage" />
