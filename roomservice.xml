@@ -21,21 +21,24 @@
     #####################################################-->
     <project name="kernel_lge_msm8992" path="kernel/lge/msm8992" remote="gfour" revision="titan" />
 
-    <!-- DEVICE TREES
+    <!-- DEVICE
     #####################################################-->
     <project name="android_device_lge_g4-common" path="device/lge/g4-common" remote="gfour" />
     <project name="android_device_lge_g4" path="device/lge/g4" remote="gfour" />
+    <project name="device_qcom_sepolicy-legacy" path="device/qcom/sepolicy-legacy" remote="gfour" revision="android-12" />
 
+    <!-- VENDOR
+    #####################################################-->
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-12" />
+    <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
+    
     <!-- LOS STUFF
     #####################################################-->
     <project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="lineage" />
 
     <!-- MISC
     #####################################################-->
-    <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-12" />
     <!-- signing tools -->
     <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
-    <!-- extend ROM project -->
-    <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
 
 </manifest>
