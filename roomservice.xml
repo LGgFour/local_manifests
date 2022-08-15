@@ -10,6 +10,9 @@
   
     <remote name="sfX" 
             fetch="https://github.com/sfX-Android/" />
+    
+    <remote name="los-op2"
+            fetch="https://github.com/LineageOS-OP2/" />
 
     <!-- REMOVALS (must be at TOP)
     #####################################################-->
@@ -35,7 +38,7 @@
     
     <!-- LOS STUFF
     #####################################################-->
-    <project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="lineage" />
+    <project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="los-op2" />
     <project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" groups="qcom,pdk-qcom" remote="lineage" >
         <!-- add guard for AOSP hardware/qcom dir -->
         <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
