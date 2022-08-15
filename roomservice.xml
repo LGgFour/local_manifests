@@ -14,6 +14,9 @@
     <remote name="los-op2"
             fetch="https://github.com/LineageOS-OP2/" />
 
+    <remote name="PE"
+            fetch="https://github.com/PixelExperience/"/>
+    
     <!-- REMOVALS (must be at TOP)
     #####################################################-->
     <!-- part of device tree -->
@@ -30,6 +33,7 @@
     <project name="android_device_lge_g4-common" path="device/lge/g4-common" remote="gfour" />
     <project name="android_device_lge_g4" path="device/lge/g4" remote="gfour" />
     <project name="device_qcom_sepolicy-legacy" path="device/qcom/sepolicy-legacy" remote="gfour" revision="android-12" />
+    <project name="system_tools_dtbtool" path="system/tools/dtbtool" remote="PE" revision="twelve" />
 
     <!-- VENDOR
     #####################################################-->
