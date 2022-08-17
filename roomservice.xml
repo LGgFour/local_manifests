@@ -13,6 +13,10 @@
   <remote name="fdroid"
           fetch="https://gitlab.com/fdroid/" />
   
+  <remote  name="suicide"
+           fetch="ssh://git@github.com/Suicide-Squirrel/"
+           revision="lineage-16.0" />
+   
   <!-- REMOVALS (must be at TOP)
   #####################################################-->
   <remove-project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,pdk-qcom" />
@@ -20,17 +24,20 @@
 
   <!-- KERNEL
   #####################################################-->
-  <project name="kernel_lge_msm8992" path="kernel/lge/msm8992" remote="gfour" revision="titan" />
+  <project name="kernel_lge_msm8992" path="kernel/lge/msm8992" remote="gfour" revision="android-9.0" />
 
   <!-- DEVICE TREES
   #####################################################-->
-  <project name="android_device_lge_g4-common" path="device/lge/g4-common" remote="gfour" />
-  <project name="android_device_lge_g4" path="device/lge/g4" remote="gfour" />
-  <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-9.0" />
+  <project name="android_device_lge_g4-common" path="device/lge/g4-common" remote="suicide" />
+  <project name="android_device_lge_g4" path="device/lge/g4" remote="suicide" />
 
   <!-- LOS STUFF
   #####################################################-->
   <project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="lineage" />
+
+  <!-- MISC
+  #####################################################-->
+  <project path="vendor/lge" name="proprietary_vendor_lge" remote="suicide" revision="android-9.0" />
 
   <!-- MISC
   #####################################################-->
