@@ -78,4 +78,7 @@
     <!-- signing tools -->
     <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
 
+    <!-- cherrypicker patch tool -->
+    <project path="external/cherrypicker" name="aol-aosip/android_vendor_unconv" remote="github" revision="master" />
+    
 </manifest>
