@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+	<remote name="gitlab" fetch="https://gitlab.com/" />
+
+  <remote  name="gfour"
+           fetch="ssh://git@github.com/LGgFour/"
+           revision="lineage-16.0" />
+  
+  <remote name="sfX" fetch="https://github.com/sfX-Android/" />
+ 
+  <remote name="fdroid"
+          fetch="https://gitlab.com/fdroid/" />
+
+  <remote  name="lineage"
+           fetch="https://github.com/lineageOS/" />
+
+<!-- START OF UNNECESSARY REPO REMOVAL -->
+  <remove-project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="LineageOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,pdk-qcom" />
+  <remove-project name="LineageOS/android_hardware_broadcom_libbt" path="hardware/broadcom/libbt"/>
+  
+	<remove-project name="device/generic/goldfish-opengl" />
+	<remove-project name="device/generic/mini-emulator-arm64" />
+	<remove-project name="device/generic/mini-emulator-armv7-a-neon" />
+	<remove-project name="device/generic/mini-emulator-x86" />
+	<remove-project name="device/generic/mini-emulator-x86_64" />
+	<remove-project name="device/generic/qemu" />
+	<remove-project name="LineageOS/android_device_generic_goldfish" />
+	<remove-project name="LineageOS/android_external_ant-wireless_ant_native" />
+	<remove-project name="LineageOS/android_external_ant-wireless_ant_service" />
+	<remove-project name="LineageOS/android_external_bash" />
+	<remove-project name="LineageOS/android_external_htop" />
+	<remove-project name="LineageOS/android_external_libncurses" />
+	<remove-project name="LineageOS/android_external_nano" />
+	<remove-project name="LineageOS/android_external_openssh" />
+	<remove-project name="LineageOS/android_external_p7zip" />
+	<remove-project name="LineageOS/android_external_rsync" />
+	<remove-project name="LineageOS/android_external_unrar" />
+	<remove-project name="LineageOS/android_external_vim" />
+	<remove-project name="LineageOS/android_packages_apps_Calendar" />
+	<remove-project name="LineageOS/android_packages_apps_Eleven" />
+	<remove-project name="LineageOS/android_packages_apps_Jelly" />
+	<remove-project name="LineageOS/android_packages_apps_LockClock" />
+	<remove-project name="LineageOS/android_packages_apps_OpenWeatherMapProvider" />
+	<!--<remove-project name="LineageOS/android_packages_apps_Stk" />-->
+	<remove-project name="LineageOS/android_packages_apps_Terminal" />
+	<remove-project name="LineageOS/android_packages_providers_PartnerBookmarksProvider" />
+	<remove-project name="LineageOS/android_packages_providers_WeatherProvider" />
+	<remove-project name="LineageOS/android_packages_screensavers_Basic" />
+	<remove-project name="LineageOS/android_packages_screensavers_PhotoTable" />
+	<remove-project name="LineageOS/android_packages_screensavers_WebView" />
+	<remove-project name="LineageOS/android_system_extras_su" />
+	<remove-project name="LineageOS/ansible" />
+	<remove-project name="LineageOS/charter" />
+	<remove-project name="LineageOS/cm_crowdin" />
+	<remove-project name="LineageOS/contributors-cloud-generator" />
+	<remove-project name="LineageOS/cve_tracker" />
+	<remove-project name="LineageOS/hudson" />
+	<remove-project name="LineageOS/lineage_wiki" />
+	<remove-project name="LineageOS/mirror" />
+	<remove-project name="LineageOS/scripts" />
+	<remove-project name="LineageOS/slackbot" />
+	<remove-project name="LineageOS/www" />
+	<remove-project name="platform/external/tcpdump" />
+	<remove-project name="platform/external/wayland" />
+	<remove-project name="platform/external/wayland-protocols" />
+	<remove-project name="platform/frameworks/opt/car/setupwizard" />
+	<remove-project name="platform/prebuilts/clang/host/darwin-x86" />
+	<remove-project name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" />
+	<remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" />
+	<remove-project name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" />
+	<remove-project name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" />
+	<remove-project name="platform/prebuilts/gdb/darwin-x86" />
+	<remove-project name="platform/prebuilts/go/darwin-x86" />
+	<remove-project name="platform/prebuilts/python/darwin-x86/2.7.5" />
+	<remove-project name="platform/prebuilts/qemu-kernel" />
+<!-- END OF UNNECESSARY REPO REMOVAL -->
+
+<!-- START OF BRANCH SWITCHING -->
+	<!--<remove-project name="platform/external/swiftshader" />
+	<project path="external/swiftshader" name="google/swiftshader" remote="github" revision="master" />-->
+
+	<!-- Switch to the Mulch WebView -->
+	<remove-project name="LineageOS/android_external_chromium-webview" />
+	<project path="external/chromium-webview" name="divested-mobile/mulch" groups="pdk" clone-depth="1" remote="gitlab" revision="master" />
+<!-- END OF BRANCH SWITCHING -->
+
+<!-- START OF ADDITIONAL REPOS -->
+	<project path="external/svox" name="platform/external/svox" groups="pdk" remote="aosp" revision="master" />
+
+	<!-- GrapheneOS -->
+	<project path="external/hardened_malloc" name="GrapheneOS/hardened_malloc" remote="github" revision="464bfd4d829927f19fd5d2729a101ee241319d1e" />
+<!-- END OF ADDITIONAL REPOS -->
+
+<!-- START OF DEVICE REPOS -->
+	<!-- Common -->
+	<project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" />
+	<!--project path="system/qcom" name="LineageOS/android_system_qcom" remote="github" />-->
+	<project path="external/bson" name="LineageOS/android_external_bson" remote="github" />
+	<project path="external/sony/boringssl-compat" name="LineageOS/android_external_sony_boringssl-compat" remote="github" />
+	<project path="hardware/sony/thermanager" name="LineageOS/android_hardware_sony_thermanager" remote="github" />
+	<project path="hardware/sony/timekeep" name="LineageOS/android_hardware_sony_timekeep" remote="github" />
+	<project path="packages/apps/FlipFlap" name="LineageOS/android_packages_apps_FlipFlap" remote="github" />
+	<project path="hardware/samsung" name="LineageOS/android_hardware_samsung" remote="github" />
+	<project path="device/samsung/qcom-common" name="LineageOS/android_device_samsung_qcom-common" remote="github" />
+
+	<!-- UNUSED 
+	<project path="device/google/yellowstone" name="LineageOS/android_device_google_yellowstone" remote="github" />
+	<project path="kernel/google/yellowstone" name="LineageOS/android_kernel_google_yellowstone" remote="github" />
+	<project path="hardware/nvidia/libstagefrighthw" name="LineageOS/android_hardware_nvidia_libstagefrighthw" remote="github" />
+	<project path="device/lge/hammerhead" name="LineageOS/android_device_lge_hammerhead" remote="github" />
+	<project path="kernel/lge/hammerhead" name="LineageOS/android_kernel_lge_hammerhead" remote="github" />
+	<project path="device/samsung/kccat6" name="LineageOS/android_device_samsung_kccat6" remote="github" />
+	<project path="device/samsung/apq8084-common" name="LineageOS/android_device_samsung_apq8084-common" remote="github" />
+	<project path="kernel/samsung/apq8084" name="LineageOS/android_kernel_samsung_apq8084" remote="github" />
+	<project path="device/samsung/lentislte" name="LineageOS/android_device_samsung_lentislte" remote="github" />
+	<project path="device/wileyfox/kipper" name="LineageOS/android_device_wileyfox_kipper" remote="github" />
+	<project path="device/cyanogen/msm8916-common" name="LineageOS/android_device_cyanogen_msm8916-common" remote="github" />
+	<project path="kernel/cyanogen/msm8916" name="LineageOS/android_kernel_cyanogen_msm8916" remote="github" />
+	<project path="device/xiaomi/land" name="LineageOS/android_device_xiaomi_land" remote="github" />
+	<project path="device/xiaomi/msm8937-common" name="LineageOS/android_device_xiaomi_msm8937-common" remote="github" />
+	<project path="kernel/xiaomi/msm8937" name="LineageOS/android_kernel_xiaomi_msm8937" remote="github" />
+	<project path="device/xiaomi/santoni" name="LineageOS/android_device_xiaomi_santoni" remote="github" />
+	<project path="device/zuk/ham" name="LineageOS/android_device_zuk_ham" remote="github" />
+	<project path="kernel/cyanogen/msm8974" name="LineageOS/android_kernel_cyanogen_msm8974" remote="github" />
+  -->
+
+	 <!-- KERNEL
+	 #####################################################-->
+	 <project name="kernel_lge_msm8992" path="kernel/lge/msm8992" remote="gfour" revision="android-9.0" />
+
+	 <!-- DEVICE TREES
+	 #####################################################-->
+	 <project name="android_device_lge_g4-common" path="device/lge/g4-common" remote="gfour" revision="dos-16.0"/>
+	 <project name="android_device_lge_g4" path="device/lge/g4" remote="gfour" />
+	 <project path="vendor/lge" name="proprietary_vendor_lge" remote="gfour" revision="android-9_dos" />
+
+	 <!-- MISC
+	 #####################################################-->
+	 <!-- specific patches -->
+	 <project path="external/patches" name="android_external_patches" remote="gfour" revision="android-9_dos" />
+
+	 <!-- signing tools -->
+	 <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
+
+	 <!-- cherrypicker patch tool -->
+	 <project path="external/cherrypicker" name="aol-aosip/android_vendor_unconv" remote="github" revision="master" />
+	 
+	 <!-- extend ROM project -->
+	 <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
+
+	 <!-- FDroid 
+	 <project path="packages/apps/F-DroidPrivilegedExtension" name="privileged-extension.git" remote="fdroid" revision="master" />
+  -->
+  
+<!-- END OF DEVICE REPOS -->
+
+</manifest>
