@@ -49,7 +49,7 @@
   <project path="external/buildtools" name="android_buildtools" remote="sfX" revision="main" />
   
   <!-- extend ROM project -->
-  <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="main" />
+  <project path="vendor/extendrom" name="android_vendor_extendrom" remote="sfX" revision="testing_magisk-ng" />
   
   <!-- /e/ OS -->
   <project path="vendor/e" name="steadfasterX/android_vendor_e" remote="glab-e" revision="v1-pie" />
